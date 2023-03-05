@@ -31,7 +31,7 @@ function Main(){
         {
             axios({
                 method:'get',
-                url: "https://localhost:7020/Gadget/Get Gadgets",
+                url: "https://webapplicationclient20230302194755.azurewebsites.net/Gadget/GetGadgets",
                 headers: {
                     'Accept': '*/*',
                     'Content-Type': 'application/json'
@@ -50,7 +50,7 @@ function Main(){
         console.log(id);
         axios({
             method:'get',
-            url: `https://localhost:7020/Gadget/Get Gadget by Id_Category?id=${id}`,
+            url: `https://webapplicationclient20230302194755.azurewebsites.net/Gadget/GetGadgetbyId_Category?id=${id}`,
             headers: {
                 'Accept': '*/*',
                 'Content-Type': 'application/json'
@@ -68,7 +68,7 @@ function Main(){
         {
             axios({
                 method:'get',
-                url: "https://localhost:7020/Category/Get Categorys",
+                url: "https://webapplicationclient20230302194755.azurewebsites.net/Category/GetCategorys",
                 headers: {
                     'Accept': '*/*',
                     'Content-Type': 'application/json'

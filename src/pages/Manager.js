@@ -40,7 +40,7 @@ function Manager(){
         {
             axios({
                 method:'get',
-                url: "https://localhost:7020/Gadget/Get Gadgets",
+                url: "https://webapplicationclient20230302194755.azurewebsites.net/Gadget/GetGadgets",
                 headers: {
                     'Accept': '*/*',
                     'Content-Type': 'application/json'
@@ -61,7 +61,7 @@ function Manager(){
         {
             axios({
                 method:'get',
-                url: "https://localhost:7020/Category/Get Categorys",
+                url: "https://webapplicationclient20230302194755.azurewebsites.net/Category/GetCategorys",
                 headers: {
                     'Accept': '*/*',
                     'Content-Type': 'application/json'
@@ -81,7 +81,7 @@ function Manager(){
         setForm2Inline('none');
         axios({
             method:'get',
-            url: `https://localhost:7020/Gadget/Get Gadget by Id_Category?id=${id}`,
+            url: `https://webapplicationclient20230302194755.azurewebsites.net/Gadget/GetGadgetbyId_Category?id=${id}`,
             headers: {
                 'Accept': '*/*',
                 'Content-Type': 'application/json'
@@ -125,7 +125,7 @@ function Manager(){
         };
         axios({
             method:'post',
-            url: "https://localhost:7020/Gadget/Add Gadget",
+            url: "https://webapplicationclient20230302194755.azurewebsites.net/Gadget/Add Gadget",
             data: JSON.stringify(new_gadget),
             dataType: "dataType",
             headers: {
@@ -144,7 +144,7 @@ function Manager(){
     function btnDell(id){
         axios({
             method:'post',
-            url: "https://localhost:7020/Gadget/Remove Gadget by Id",
+            url: "https://webapplicationclient20230302194755.azurewebsites.net/Gadget/RemoveGadgetbyId",
             data: JSON.stringify(id),
             dataType: "dataType",
             headers: {
@@ -172,9 +172,8 @@ function Manager(){
         };
         axios({
             method:'post',
-            url: "https://localhost:7020/Gadget/Update Gadget by Id",
+            url: "https://webapplicationclient20230302194755.azurewebsites.net/Gadget/UpdateGadgetbyId",
             data: JSON.stringify(update_gadget),
-            dataType: "dataType",
             headers: {
                 'Accept': '*/*',
                 'Content-Type': 'application/json',
@@ -185,6 +184,7 @@ function Manager(){
            console.log(data);
            window.location.reload();
         })
+        console.log(window.sessionStorage.getItem('token'));
     }
     function getOut(){
         if(window.sessionStorage.getItem('token')==null|| window.sessionStorage.getItem('token')=='null')

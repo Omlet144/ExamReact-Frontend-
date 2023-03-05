@@ -18,7 +18,7 @@ const [pass2, setPass2] = useState("");
         {
           axios({
             method:'post',
-            url: "https://localhost:7020/api/Authentication/regUser",
+            url: "https://webapplicationclient20230302194755.azurewebsites.net/api/Authentication/regUser",
             data: {
                 "userName": login,
                 "password": pass,

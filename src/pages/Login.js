@@ -12,7 +12,7 @@ function Log()
 {
     axios({
         method:'post',
-        url: "https://localhost:7020/api/Authentication/login",
+        url: "https://webapplicationclient20230302194755.azurewebsites.net/api/Authentication/login",
         data: {
             "userName": login,
             "password": pass
